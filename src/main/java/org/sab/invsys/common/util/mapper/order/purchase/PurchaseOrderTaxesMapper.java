@@ -42,10 +42,9 @@ public class PurchaseOrderTaxesMapper {
 		return ui;
 	}
 
-	public Page<PurchaseOrderTaxesUI> toUIBean(
-			Page<PurchaseOrderTaxes> data, Pageable pageable) {
-		return new PageImpl<PurchaseOrderTaxesUI>(
-				toUIBean(data.getContent()));
+	public Page<PurchaseOrderTaxesUI> toUIBean(Page<PurchaseOrderTaxes> data,
+			Pageable pageable) {
+		return new PageImpl<PurchaseOrderTaxesUI>(toUIBean(data.getContent()));
 	}
 
 	public PurchaseOrderTaxes toPersistenceBean(PurchaseOrderTaxesUI ui) {

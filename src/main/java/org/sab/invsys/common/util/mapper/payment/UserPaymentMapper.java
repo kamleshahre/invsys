@@ -14,7 +14,7 @@ import org.springframework.data.domain.Pageable;
 public class UserPaymentMapper {
 
 	Logger logger = Logger.getLogger(UserPaymentMapper.class);
-	
+
 	public UserPaymentUI toUIBean(UserPayment data) {
 		UserPaymentUI uiBean = null;
 
@@ -31,7 +31,7 @@ public class UserPaymentMapper {
 		}
 
 		logger.debug("Payment is :: " + uiBean);
-		
+
 		return uiBean;
 	}
 

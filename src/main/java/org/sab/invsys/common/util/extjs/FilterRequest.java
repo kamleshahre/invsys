@@ -1,6 +1,5 @@
 package org.sab.invsys.common.util.extjs;
 
-
 public class FilterRequest {
 
 	private String property;
@@ -11,10 +10,9 @@ public class FilterRequest {
 		this.property = property;
 		this.value = value;
 	}
-	
-	public FilterRequest()
-	{
-		
+
+	public FilterRequest() {
+
 	}
 
 	public String getProperty() {
@@ -33,8 +31,7 @@ public class FilterRequest {
 		this.value = value;
 	}
 
-	public String toString()
-	{
-		return "Property: " + property + " -- Value: " + value ;		
+	public String toString() {
+		return "Property: " + property + " -- Value: " + value;
 	}
 }

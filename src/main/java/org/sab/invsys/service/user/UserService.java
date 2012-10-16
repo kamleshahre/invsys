@@ -44,8 +44,7 @@ public class UserService {
 		return mapper.toUIBean(repository.findAll());
 	}
 
-	public Page<UserUI> findAll(Pageable pageable,
-			List<FilterRequest> filters) {
+	public Page<UserUI> findAll(Pageable pageable, List<FilterRequest> filters) {
 
 		Predicate predicate = toPredicate(filters);
 
@@ -72,8 +71,6 @@ public class UserService {
 		existingUser.setMobilePhone(uiBean.getMobilePhone());
 		existingUser.setNotes(uiBean.getNotes());
 		existingUser.setOfficePhone(uiBean.getOfficePhone());
-
-		/* existingUser.getRole().setRole(user.getRole().getRole()); */
 
 		User saved = null;
 
@@ -134,8 +131,8 @@ public class UserService {
 				case ACCOUNTTYPE:
 					if (filter.getValue() != null
 							&& !"".equals(filter.getValue())) {
-						expression = user.accountType.like("%" + filter.getValue()
-								+ "%");
+						expression = user.accountType.like("%"
+								+ filter.getValue() + "%");
 					}
 					break;
 				}

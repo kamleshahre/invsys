@@ -49,10 +49,9 @@ public class PurchaseOrderItemsMapper {
 		return ui;
 	}
 
-	public Page<PurchaseOrderItemsUI> toUIBean(
-			Page<PurchaseOrderItems> data, Pageable pageable) {
-		return new PageImpl<PurchaseOrderItemsUI>(
-				toUIBean(data.getContent()));
+	public Page<PurchaseOrderItemsUI> toUIBean(Page<PurchaseOrderItems> data,
+			Pageable pageable) {
+		return new PageImpl<PurchaseOrderItemsUI>(toUIBean(data.getContent()));
 	}
 
 	public PurchaseOrderItems toPersistenceBean(PurchaseOrderItemsUI ui) {

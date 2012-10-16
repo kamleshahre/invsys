@@ -33,9 +33,8 @@ public class UserMapper {
 			uiBean.setModifiedDate(user.getModifiedDate());
 			uiBean.setNotes(user.getNotes());
 			uiBean.setOfficePhone(user.getOfficePhone());
-			
-			if(user.getBalance() != null)
-			{
+
+			if (user.getBalance() != null) {
 				uiBean.setBalance(user.getBalance().getAmount());
 			}
 		}

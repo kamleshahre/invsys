@@ -35,23 +35,6 @@ public class PurchaseOrderMapper {
 			ui.setUserName(data.getUser().getUsername());
 			ui.setTotal(data.getTotal());
 
-/*			
-			if(data.getCharges() != null && data.getCharges().size() > 0)
-			{
-				PurchaseOrderChargesMapper chargeMapper = new PurchaseOrderChargesMapper();
-				ui.setCharges(chargeMapper.toUIBean(data.getCharges()));
-			}
-			if(data.getItems() != null && data.getItems().size() > 0)
-			{
-				PurchaseOrderItemsMapper itemsMapper = new PurchaseOrderItemsMapper();
-				ui.setItems(itemsMapper.toUIBean(data.getItems()));
-			}
-			if(data.getTaxes() != null && data.getTaxes().size() > 0)
-			{
-				PurchaseOrderTaxesMapper taxMapper = new PurchaseOrderTaxesMapper();
-				ui.setTaxes(taxMapper.toUIBean(data.getTaxes()));
-			}
-*/			
 		}
 
 		return ui;
@@ -93,26 +76,23 @@ public class PurchaseOrderMapper {
 			user.setUsername(ui.getUserName());
 			data.setUser(user);
 
-			if(ui.getCharges() != null && ui.getCharges().size() > 0)
-			{
+			if (ui.getCharges() != null && ui.getCharges().size() > 0) {
 				PurchaseOrderChargesMapper chargeMapper = new PurchaseOrderChargesMapper();
 				Set<PurchaseOrderCharges> charges = new HashSet<PurchaseOrderCharges>(
 						chargeMapper.toPersistenceBean(ui.getCharges()));
 				data.setCharges(charges);
 			}
-			if(ui.getItems() != null && ui.getItems().size() > 0)
-			{
+			if (ui.getItems() != null && ui.getItems().size() > 0) {
 				PurchaseOrderItemsMapper itemsMapper = new PurchaseOrderItemsMapper();
-				List<PurchaseOrderItems> pItems = itemsMapper.toPersistenceBean(ui.getItems()); 
+				List<PurchaseOrderItems> pItems = itemsMapper
+						.toPersistenceBean(ui.getItems());
 				Set<PurchaseOrderItems> items = new HashSet<PurchaseOrderItems>();
-				if(pItems != null)
-				{
+				if (pItems != null) {
 					items.addAll(pItems);
 				}
 				data.setItems(items);
 			}
-			if(ui.getTaxes() != null && ui.getTaxes().size() > 0)
-			{
+			if (ui.getTaxes() != null && ui.getTaxes().size() > 0) {
 				PurchaseOrderTaxesMapper taxMapper = new PurchaseOrderTaxesMapper();
 				Set<PurchaseOrderTaxes> taxes = new HashSet<PurchaseOrderTaxes>(
 						taxMapper.toPersistenceBean(ui.getTaxes()));

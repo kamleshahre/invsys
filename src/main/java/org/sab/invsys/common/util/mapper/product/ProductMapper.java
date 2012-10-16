@@ -42,8 +42,7 @@ public class ProductMapper {
 		return uiBeans;
 	}
 
-	public Page<ProductUI> toUIBean(Page<Product> products,
-			Pageable pageable) {
+	public Page<ProductUI> toUIBean(Page<Product> products, Pageable pageable) {
 		Page<ProductUI> uiBeans = new PageImpl<ProductUI>(
 				toUIBean(products.getContent()), pageable,
 				products.getTotalElements());

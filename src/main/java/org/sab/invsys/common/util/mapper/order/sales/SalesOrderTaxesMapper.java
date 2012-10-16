@@ -57,8 +57,7 @@ public class SalesOrderTaxesMapper {
 		return data;
 	}
 
-	public List<SalesOrderTaxes> toPersistenceBean(
-			List<SalesOrderTaxesUI> ui) {
+	public List<SalesOrderTaxes> toPersistenceBean(List<SalesOrderTaxesUI> ui) {
 		List<SalesOrderTaxes> data = new ArrayList<SalesOrderTaxes>();
 
 		for (SalesOrderTaxesUI tax : ui) {

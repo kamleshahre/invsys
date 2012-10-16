@@ -21,8 +21,7 @@ public class PurchaseOrderChargesMapper {
 		return ui;
 	}
 
-	public List<PurchaseOrderChargesUI> toUIBean(
-			List<PurchaseOrderCharges> data) {
+	public List<PurchaseOrderChargesUI> toUIBean(List<PurchaseOrderCharges> data) {
 		List<PurchaseOrderChargesUI> ui = new ArrayList<PurchaseOrderChargesUI>();
 
 		for (PurchaseOrderCharges charge : data) {
@@ -32,8 +31,7 @@ public class PurchaseOrderChargesMapper {
 		return ui;
 	}
 
-	public List<PurchaseOrderChargesUI> toUIBean(
-			Set<PurchaseOrderCharges> data) {
+	public List<PurchaseOrderChargesUI> toUIBean(Set<PurchaseOrderCharges> data) {
 		List<PurchaseOrderChargesUI> ui = new ArrayList<PurchaseOrderChargesUI>();
 
 		for (PurchaseOrderCharges charge : data) {
@@ -45,8 +43,7 @@ public class PurchaseOrderChargesMapper {
 
 	public Page<PurchaseOrderChargesUI> toUIBean(
 			Page<PurchaseOrderCharges> data, Pageable pageable) {
-		return new PageImpl<PurchaseOrderChargesUI>(
-				toUIBean(data.getContent()));
+		return new PageImpl<PurchaseOrderChargesUI>(toUIBean(data.getContent()));
 	}
 
 	public PurchaseOrderCharges toPersistenceBean(PurchaseOrderChargesUI ui) {

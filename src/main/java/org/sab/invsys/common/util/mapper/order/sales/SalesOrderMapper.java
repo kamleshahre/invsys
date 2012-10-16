@@ -35,20 +35,6 @@ public class SalesOrderMapper {
 			ui.setUserName(data.getUser().getUsername());
 			ui.setTotal(data.getTotal());
 
-			/*
-			 * if(data.getCharges() != null && data.getCharges().size() > 0) {
-			 * PurchaseOrderChargesMapper chargeMapper = new
-			 * PurchaseOrderChargesMapper();
-			 * ui.setCharges(chargeMapper.toUIBean(data.getCharges())); }
-			 * if(data.getItems() != null && data.getItems().size() > 0) {
-			 * PurchaseOrderItemsMapper itemsMapper = new
-			 * PurchaseOrderItemsMapper();
-			 * ui.setItems(itemsMapper.toUIBean(data.getItems())); }
-			 * if(data.getTaxes() != null && data.getTaxes().size() > 0) {
-			 * PurchaseOrderTaxesMapper taxMapper = new
-			 * PurchaseOrderTaxesMapper();
-			 * ui.setTaxes(taxMapper.toUIBean(data.getTaxes())); }
-			 */
 		}
 
 		return ui;
@@ -64,8 +50,7 @@ public class SalesOrderMapper {
 		return ui;
 	}
 
-	public Page<SalesOrderUI> toUIBean(Page<SalesOrder> data,
-			Pageable pageable) {
+	public Page<SalesOrderUI> toUIBean(Page<SalesOrder> data, Pageable pageable) {
 		return new PageImpl<SalesOrderUI>(toUIBean(data.getContent()));
 	}
 

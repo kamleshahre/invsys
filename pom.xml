@@ -7,7 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>Sample Invoice System</name>
+	<name>Sample Invoice Application</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -240,22 +240,22 @@
 		</dependency>
 
 		<!-- Hibernate and JPA -->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-ehcache</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-        
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
 		<!-- QueryDSL -->
 		<dependency>
 			<groupId>com.mysema.querydsl</groupId>
@@ -317,7 +317,7 @@
 			<plugin>
 				<groupId>com.mysema.maven</groupId>
 				<artifactId>maven-apt-plugin</artifactId>
-				<version>1.0.3</version><!--$NO-MVN-MAN-VER$-->
+				<version>1.0.3</version><!--$NO-MVN-MAN-VER$ -->
 				<executions>
 					<execution>
 						<phase>generate-sources</phase>

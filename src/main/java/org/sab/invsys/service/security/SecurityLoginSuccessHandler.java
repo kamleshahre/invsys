@@ -13,12 +13,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class SecurityLoginSuccessHandler extends
 		SimpleUrlAuthenticationSuccessHandler {
-/*	private AuthenticationSuccessHandler defaultHandler;
-
-	public SecurityLoginSuccessHandler(
-			AuthenticationSuccessHandler defaultHandler) {
-		this.defaultHandler = defaultHandler;
-	}*/
 	
 	public SecurityLoginSuccessHandler()
 	{

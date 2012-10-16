@@ -71,8 +71,7 @@ public class SalesOrderItemsMapper {
 		return data;
 	}
 
-	public List<SalesOrderItems> toPersistenceBean(
-			List<SalesOrderItemsUI> ui) {
+	public List<SalesOrderItems> toPersistenceBean(List<SalesOrderItemsUI> ui) {
 		List<SalesOrderItems> data = new ArrayList<SalesOrderItems>();
 		logger.debug(ui);
 

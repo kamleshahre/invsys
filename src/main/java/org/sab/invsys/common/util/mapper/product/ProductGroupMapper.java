@@ -72,5 +72,4 @@ public class ProductGroupMapper {
 		return groups;
 	}
 
-
 }

@@ -43,8 +43,7 @@ public class SalesOrderChargesMapper {
 
 	public Page<SalesOrderChargesUI> toUIBean(Page<SalesOrderCharges> data,
 			Pageable pageable) {
-		return new PageImpl<SalesOrderChargesUI>(
-				toUIBean(data.getContent()));
+		return new PageImpl<SalesOrderChargesUI>(toUIBean(data.getContent()));
 	}
 
 	public SalesOrderCharges toPersistenceBean(SalesOrderChargesUI ui) {
